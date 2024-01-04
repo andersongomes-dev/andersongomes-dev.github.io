@@ -1,9 +1,9 @@
 ---
-title: about
+title: About
 date: 2024-01-03 19:51:09
-aubot: Cange-Q
-portrait: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg"
-describe: "一个阳光快乐的BOY,在正合适的年龄里希望遇见正好的你。"
+about: ""
+portrait: ""
+describe: ""
 type: "about"
 layout: "about"
 comments: false
@@ -48,9 +48,4 @@ comments: false
             </p>
         </div>
     </div>
-    <a class="button is-primary is-large floating-arrow-down" href="#home-section" style="bottom: -40vh;">
-        <span class="icon is-large">
-            <i class="fas fa-arrow-up"></i>
-        </span>
-    </a>
 </section>

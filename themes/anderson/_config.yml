@@ -19,8 +19,7 @@ menus:
   #tags: /tags
   #links: /links
   about: /about
-logo: /image/logo.png
-icon: /image/favicon.ico
+icon: /assets/favicons/favicon.ico
 bottomIcon: 
   - {
     name: 'Github',

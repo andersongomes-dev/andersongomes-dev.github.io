@@ -10,7 +10,7 @@
 									<div class="column is-12 post">
 										<article class="columns featured">
 											<div class="column is-7 post-img ">
-												<img src="<%= post.cover %>" alt="">
+												<img src="<%= post.cover %>" style="object-fit: cover;max-height: 300px;min-height: 300px;">
 											</div>
 											<div class="column is-5 featured-content va">
 												<div>
@@ -34,7 +34,7 @@
 														<div class="meat-type"></div>
 													</div>
 													<br>
-													<a href="<%- url_for(post.path) %>" class="button is-primary post-button">Read More</a>
+													<a href="<%- url_for(post.path) %>" class="button is-primary post-button">Leia Mais</a>
 												</div>
 											</div>
 											
@@ -47,14 +47,47 @@
 										<div class="columns is-multiline">
 											<% page.posts.each(function (post,i) { %>
 												<% if(i> 0){ %>
-													<div class="column post is-6">
+													<div class="column is-12">
+														<div class="card post-card">
+													
+															<div class="card-image">
+																<img src="<%= post.cover %>" alt="">
+															</div>
+													
+															<div class="card-content">
+																<div class="content">
+													
+																	<a class="title is-4" href="<%- url_for(post.path) %>">
+																		<%= post.title %>
+																	</a>
+																	<p></p>
+																	<p>
+																		<%- post.excerpt || '' %>
+																	</p>
+																	<p></p>
+													
+																</div>
+																<div class="has-text-centered">
+																	<a href="<%- url_for(post.path) %>"
+																		class="button is-primary">Leia Mais</a>
+																</div>
+															</div>
+															<footer class="card-footer">
+																<p class="card-footer-item">Publicado: <%- date(post.date, "DD/MM/YYYY" ) %></p>
+															</footer>
+														</div>
+													</div>
+
+
+
+													<!--div class="column post is-6">
 														<article class="columns is-multiline">
 															<div class="column is-12 post-img">
-																<img src="<%= post.cover %>" alt="Featured Image">
+																<img src="<%= post.cover %>" alt="Featured Image" style="object-fit: cover;max-height: 300px;">
 															</div>
 															<div class="column is-12 featured-content ">
 																<!--h3 class="heading post-category">Category Name</h3-->
-																<h1 class="title post-title">
+																<!--h1 class="title post-title">
 																	<%= post.title %>
 																</h1>
 																<p class="post-excerpt">
@@ -69,15 +102,15 @@
 																		<span class="post-tag">
 																			<%- date(post.date, "YYYY-MM-DD" ) %>
 																		</span-->
-																	</div>
+																	<!--/div>
 																	<div class="meat-type"></div>
 																</div>
 																<br>
 																<a href="<%- url_for(post.path) %>"
-																	class="button is-primary post-button">Read More</a>
+																	class="button is-primary post-button">Leia Mais</a>
 															</div>
 														</article>
-													</div>
+													</div-->
 													<hr>
 													<% } %>
 														<% }) %>

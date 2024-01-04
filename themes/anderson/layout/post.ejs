@@ -1,17 +1,16 @@
 <%- partial('_partial/header',{name:'post'}) %> 
-<!--% partial('_partial/post_head') %--> 
-<!--% partial('_partial/post_centent') %--> 
 <% 
-let cover_creditos = "";
-if(page.cover_creditos){ cover_creditos = page.cover_creditos } 
+  let cover_creditos = "";
+  if(page.cover_creditos){ cover_creditos = page.cover_creditos } 
 %>
 <div class="container container-100vh">
   <div class="columns">
     <div class="column is-8 is-offset-2 has-text-centered">
-      <figure class="image is-16by9">
-        <img src="<%= page.cover %>" alt="" />
+      <!--figure class="image is-16by9"-->
+      <figure class="image">
+        <img src="<%= page.cover %>" alt="">
+        <figcaption><%= cover_creditos %></figcaption>
       </figure>
-      <p><%= cover_creditos %></p>
     </div>
   </div>
   <section class="articles">
@@ -22,7 +21,7 @@ if(page.cover_creditos){ cover_creditos = page.cover_creditos }
             <div class="media-content has-text-centered">
               <p class="title article-title"><%= page.title %></p>
               <p class="subtitle is-4 article-subtitle is-pulled-left">
-                <%= date(page.date, "DD-MM-YYYY") %> Por <%= page.author || theme.author %>
+                Escrito por <%= page.author || theme.author %> em <%= date(page.date, "DD/MM/YYYY") %>
               </p>
               
               <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->

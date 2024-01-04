@@ -5,5 +5,5 @@ tags:
 cover:
 cover_creditos: 
 default_cover: 
-excerpt:
+excerpt: {{ title }}
 ---
