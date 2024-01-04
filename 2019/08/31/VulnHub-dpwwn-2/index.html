@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="pt-br">
+	<head>
+		
+<title>VulnHub dpwwn: 2 - Anderson Gomes</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="/assets/fontawesome-free-6.5.1-web/css/all.css">
+
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+<meta name="keywords" content="Anderson Gomes">
+<meta name="description" content="">
+
+
+	<meta name="generator" content="Hexo 7.0.0"></head>
+	<body>
+		<div id="home-hidden"></div>
+		<nav class="navbar is-fixed-top has-text-centered" role="navigation" aria-label="main navigation" style="background-color: #19193b;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item logo" target="_blank" rel="noopener" href="https://andersongomes.dev.br">
+				<img src="/assets/images/logo_anderson.png" width="112" height="28">
+			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/">
+						HOME
+					</a>
+					
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/about">
+						ABOUT
+					</a>
+					
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.youtube.com/@andersonDev_">
+							<i class="fa-brands fa-youtube fa-2xl"></i>
+						</a>
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/devanderson">
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav> 
+
+<div class="container container-100vh">
+  <div class="columns">
+    <div class="column is-8 is-offset-2 has-text-centered">
+      <!--figure class="image is-16by9"-->
+      <figure class="image">
+        <img src="https://cdn-images-1.medium.com/max/800/1*w9aO18UeJmecg-8BIXiFJw.png" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article background-color-principal">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title">VulnHub dpwwn: 2</p>
+              <p class="subtitle is-4 article-subtitle is-pulled-left">
+                Escrito por Anderson Gomes em 31/08/2019
+              </p>
+              
+              <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->
+            </div>
+          </div>
+          <div class="content article-body"><h1 id="VulnHub-dpwwn-2"><a href="#VulnHub-dpwwn-2" class="headerlink" title="VulnHub dpwwn: 2"></a>VulnHub dpwwn: 2</h1><p>Informações sobre o Alvo.</p>
+<hr>
+<h3 id="VulnHub-dpwwn-2-1"><a href="#VulnHub-dpwwn-2-1" class="headerlink" title="VulnHub dpwwn: 2"></a><a target="_blank" rel="noopener" href="https://medium.com/me/stats/post/9ec5d8547c0?source=main_stats_page">VulnHub</a> <a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dpwwn-1,342/">dpwwn:</a> 2</h3><p><a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dpwwn-2,343/" title="https://www.vulnhub.com/entry/dpwwn-2,343/"><strong>dpwwn: 2</strong><br>_dpwwn: 2, made by Debashis Pal. Download &amp; walkthrough links are available._www.vulnhub.com</a><a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dpwwn-2,343/"></a></p>
+<h3 id="Informacoes-sobre-o-Alvo"><a href="#Informacoes-sobre-o-Alvo" class="headerlink" title="Informações sobre o Alvo."></a>Informações sobre o Alvo.</h3><p>A flag esta em &#x2F;root&#x2F;dpwwn-02-FLAG.txt.</p>
+<p>O ip do nosso alvo é dado no começo do desafio “10.10.10.10”.</p>
+<h3 id="Reconhecimento-Enumeracao"><a href="#Reconhecimento-Enumeracao" class="headerlink" title="Reconhecimento &#x2F; Enumeração."></a>Reconhecimento &#x2F; Enumeração.</h3><figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*w9aO18UeJmecg-8BIXiFJw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>nmap</p>
+<p>Logo depois da execução do nmap, notamos dois serviços interessantes, o primeiro é o apache rodando na porta 80, e a outra é o NFS rodando na porta 2049. <br>Vamos verificar a lista de diretórios no NFS.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*gU-Wb8l36_iyvkLGH1vQPA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>showmount.</p>
+<p>Há um diretório para que podemos montar, vamos para o próximo passo que é escanear a aplicação web.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*vwOg3BBi30FhZRSjaU8Zxw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>wordpress</p>
+<p>Encontramos um diretório “wordpress”, o próximo passo e usar o “wpscan” para verificar se existe alguma vulnerabilidade.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*7txpTdjqgQ5-cvKJOD9Wmw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Encontramos uma vulnerabilidade de LFI no wordpress, antes de de explorar a falha no wordpress vamos montar o NFS na nossa máquina.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*u5DoFkWGTYkjElBfUSzcig.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Depois de montar o diretório vamos verificar se existe algum arquivo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/1200/1*X8yOucd3YWrYDjUkZEGvVw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Como não há nenhum arquivo no diretório, vamos criar um arquivo em php para executarmos alguns comandos.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/1200/1*sjDc5Q0arpJXiZuWBb7-jg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>shell.php</p>
+<p>Agora vamos explorar a falha LFI, para testar nosso arquivo php vamos enviar um comando “ls”.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*ITMYYrtp0cooUh9dVAnfRw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>O comando foi executado perfeitamente, agora vamos ler as configurações do NFS que esta localizada no “&#x2F;etc&#x2F;exports”.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*H6u6HT1gcJpJXUMBAgAUIA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Tem uma configuração interessante, se no momento que eu montar o diretório na minha máquina meu ip for “10.10.10.100” eu vou conseguir criar e modificar arquivos como “root” pois o parâmetro “no_root_squash” esta ativo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*fxp_pRA4MD48wOFbP-qluA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Só para validar eu criei um arquivo “texte.txt” para verificar se realmente ele era criado como usuário, e grupo “root”. <br>Logo depois criei um arquivo “shell.c” o código esta logo abaixo, tem outras formas de fazer isso mas eu já tinha este código na minha maquina para estudo e decidi usa-lo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*rm4Vq23MB_ZXQENW2oj1XA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>shell.c</p>
+<p>Depois de criar e compilar o arquivo, adicionei uma permissão especial, para que qualquer usuário que executar o arquivo tenha o mesmo privilégio do dono do arquivo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*oHhjqu-GPOOh-l_tc0pymg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Resolvi executar uma Shell reversa para te acesso ao servidor.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*bTpmhPPnYlVvPidfKroZTQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>shell reverso.</p>
+<p>Depois de ter acesso ao servidor é só executar o arquivo “shell” que foi compilado antes, e ganhamos acesso com usuário “root”.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*Ybqx3OtgZrJJT_MUrK-lCg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Agora é só manter o acesso.</p>
+<p>Até a próxima </p>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column is-6 is-offset-3">
+      
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/09/04/VulnHub-dpwwn-3/"
+        title="Artigo Anterior"
+      >
+        <strong><i class="fa fa-arrow-left"></i> Artigo Anterior</strong>
+      </a>
+       
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/08/30/VulnHub-dpwwn-1/"
+        title="Próximo Artigo"
+      >
+        <strong>Próximo Artigo <i class="fa fa-arrow-right"></i></strong>
+      </a>
+      
+    </div>
+  </nav>
+</div>
+
+<!--% partial('_partial/post_paging') %-->
+
+		<a id="toTop" class="button" style="display: block;" href="#home-hidden">
+  <span class="icon is-large">
+      <i class="fas fa-arrow-up"></i>
+  </span>
+</a>
+
+<footer class="section footer_section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong
+          >© 2023-2024 Desenvolvido por
+          <a target="_blank" rel="noopener" href="https://andersongomes.dev.br">Anderson Gomes</a>.</strong
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/bulma.js"></script>
+
+
+	</body>
+</html>
+

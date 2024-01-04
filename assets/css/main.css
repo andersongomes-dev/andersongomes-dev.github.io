@@ -211,3 +211,14 @@ body {
     cursor: pointer;
     animation: bounce-top 2s linear 0s infinite alternate both;
 }
+
+blockquote {
+    background-color: #2c2c4e !important;
+}
+
+.footer_section {
+    background-color: #2c2c4e !important;
+}
+.post-card {
+    background-color: #2c2c4e !important;
+}

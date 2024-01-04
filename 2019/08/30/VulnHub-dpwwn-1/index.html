@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="pt-br">
+	<head>
+		
+<title>VulnHub dpwwn: 1 - Anderson Gomes</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="/assets/fontawesome-free-6.5.1-web/css/all.css">
+
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+<meta name="keywords" content="Anderson Gomes">
+<meta name="description" content="">
+
+
+	<meta name="generator" content="Hexo 7.0.0"></head>
+	<body>
+		<div id="home-hidden"></div>
+		<nav class="navbar is-fixed-top has-text-centered" role="navigation" aria-label="main navigation" style="background-color: #19193b;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item logo" target="_blank" rel="noopener" href="https://andersongomes.dev.br">
+				<img src="/assets/images/logo_anderson.png" width="112" height="28">
+			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/">
+						HOME
+					</a>
+					
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/about">
+						ABOUT
+					</a>
+					
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.youtube.com/@andersonDev_">
+							<i class="fa-brands fa-youtube fa-2xl"></i>
+						</a>
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/devanderson">
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav> 
+
+<div class="container container-100vh">
+  <div class="columns">
+    <div class="column is-8 is-offset-2 has-text-centered">
+      <!--figure class="image is-16by9"-->
+      <figure class="image">
+        <img src="https://cdn-images-1.medium.com/max/800/1*jg2OQiueNIrgWfFH7l4dCw.png" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article background-color-principal">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title">VulnHub dpwwn: 1</p>
+              <p class="subtitle is-4 article-subtitle is-pulled-left">
+                Escrito por Anderson Gomes em 30/08/2019
+              </p>
+              
+              <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->
+            </div>
+          </div>
+          <div class="content article-body"><h1 id="VulnHub-dpwwn-1"><a href="#VulnHub-dpwwn-1" class="headerlink" title="VulnHub dpwwn: 1"></a>VulnHub dpwwn: 1</h1><p>Alvo: dpwwn: 1 (Linux) Atacante: parrot 4.19</p>
+<hr>
+<h3 id="VulnHub-dpwwn-1-1"><a href="#VulnHub-dpwwn-1-1" class="headerlink" title="VulnHub dpwwn: 1"></a><a target="_blank" rel="noopener" href="https://medium.com/me/stats/post/9ec5d8547c0?source=main_stats_page">VulnHub</a> <a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dpwwn-1,342/"><strong>dpwwn: 1</strong></a></h3><p><a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dpwwn-1,342/" title="https://www.vulnhub.com/entry/dpwwn-1,342/"><strong>dpwwn: 1</strong><br>_dpwwn: 1, made by Debashis Pal. Download &amp; walkthrough links are available._www.vulnhub.com</a><a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dpwwn-1,342/"></a></p>
+<blockquote>
+<p>Alvo: <strong>dpwwn: 1 <em>(Linux)</em></strong><br>Atacante: <strong><em>parrot</em></strong> <em>4.19</em></p>
+</blockquote>
+<h3 id="Informacoes-sobre-o-Alvo"><a href="#Informacoes-sobre-o-Alvo" class="headerlink" title="Informações sobre o Alvo."></a>Informações sobre o Alvo.</h3><p>A flag esta em &#x2F;root&#x2F;dpwwn-01-FLAG.txt .</p>
+<h3 id="Reconhecimento-Enumeracao"><a href="#Reconhecimento-Enumeracao" class="headerlink" title="Reconhecimento &#x2F; Enumeração."></a>Reconhecimento &#x2F; Enumeração.</h3><figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*jg2OQiueNIrgWfFH7l4dCw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>netdiscover.</p>
+<p>O ip do alvo é o 192.168.1.8</p>
+<p>Usando “nmap” para lista portas e serviços e verificar se há alguma vulnerabilidade.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*Uim4_nm6E7vctEA_YahyYw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>sqlmap.</p>
+<p>Há três serviços rodando no alvo, e dois deles parece interessante, o http e o MySQL.</p>
+<p><strong>Analisando o serviço de HTTP.</strong></p>
+<p>A página “info.php” contem bastante informação interessante como versão do php, apache, versão do SO, etc.</p>
+<p><strong>Analisando o serviço de MySQL.</strong></p>
+<p>A primeira coisa que fiz foi tentar logar com usuário “root” sem senha.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*zTgz5LDn8B0-M2S_yAZDpw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>MySQL sem senha configurada.</p>
+<p>Conseguimos um usuário e senha para acessar o ssh.</p>
+<p><strong>Escalando privilégios.</strong></p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*aC61Y645Hi1fXWZ-sPfgbw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Depois de acessar o Shell da maquina encontro um arquivo chamado “<strong>logrot.sh”</strong>, olhei o conteúdo do arquivo ele não executa nada de útil para nos, resolvi verificar se ele estava em execução, o arquivo é executado a cada 3 minutos com “<strong>root”</strong>.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*pqg8h-6CJqLdrUITMH9dWg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Copiando o sudoers</p>
+<p>Fiz uma pequena alteração no script para copiar o sudoers para a pasta “&#x2F;tmp”, e logo depois adicionar algumas permissões para poder editar o arquivo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*cusul-IqbMM4n3nDrUjRhA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Depois de 3 minutos o arquivo estava na pasta “&#x2F;tmp”, Editei o arquivo “logrot.sh” e comentei a linha que copiava o arquivo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*P1qI2AW25JAXjsfBTObQHQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Adicionei o nome do usuário no arquivo e com permissões igual a do “root”.<br>Se observar logo acima do “root” esta escrito “permitir que o root execute qualquer comando em qualquer lugar” já que ele pode o “mistic” também poderá.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*orOBUqQMtLTBDZHiK-yZyw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Vamos editar o arquivo “logrot.sh” novamente e colocar o conteúdo do “&#x2F;tmp&#x2F;sudoers” no “&#x2F;etc&#x2F;sudoers”.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*xSaVtMBQXZyZRhpbiDXujg.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Depois de alguns minutos nos tornamos “root”.</p>
+<p>Até a próxima</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column is-6 is-offset-3">
+      
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/08/31/VulnHub-dpwwn-2/"
+        title="Artigo Anterior"
+      >
+        <strong><i class="fa fa-arrow-left"></i> Artigo Anterior</strong>
+      </a>
+       
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/08/22/VulnHub-serial-1/"
+        title="Próximo Artigo"
+      >
+        <strong>Próximo Artigo <i class="fa fa-arrow-right"></i></strong>
+      </a>
+      
+    </div>
+  </nav>
+</div>
+
+<!--% partial('_partial/post_paging') %-->
+
+		<a id="toTop" class="button" style="display: block;" href="#home-hidden">
+  <span class="icon is-large">
+      <i class="fas fa-arrow-up"></i>
+  </span>
+</a>
+
+<footer class="section footer_section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong
+          >© 2023-2024 Desenvolvido por
+          <a target="_blank" rel="noopener" href="https://andersongomes.dev.br">Anderson Gomes</a>.</strong
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/bulma.js"></script>
+
+
+	</body>
+</html>
+

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="pt-br">
+	<head>
+		
+<title>Já usou algum aplicativo modificado? - Anderson Gomes</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+
+<link rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="/assets/fontawesome-free-6.5.1-web/css/all.css">
+
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+<meta name="keywords" content="Anderson Gomes">
+<meta name="description" content="">
+
+
+	<meta name="generator" content="Hexo 7.0.0"></head>
+	<body>
+		<div id="home-hidden"></div>
+		<nav class="navbar is-fixed-top has-text-centered" role="navigation" aria-label="main navigation" style="background-color: #19193b;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item logo" target="_blank" rel="noopener" href="https://andersongomes.dev.br">
+				<img src="/assets/images/logo_anderson.png" width="112" height="28">
+			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/">
+						HOME
+					</a>
+					
+					</for>
+					<a class="navbar-item navbar-item-hover" href="/about">
+						ABOUT
+					</a>
+					
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.youtube.com/@andersonDev_">
+							<i class="fa-brands fa-youtube fa-2xl"></i>
+						</a>
+						<a class="button navbar-item-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/devanderson">
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav> 
+
+<div class="container container-100vh">
+  <div class="columns">
+    <div class="column is-8 is-offset-2 has-text-centered">
+      <!--figure class="image is-16by9"-->
+      <figure class="image">
+        <img src="https://cdn-images-1.medium.com/max/800/1*6DFc5bbE7cL5uQpzk_nvog.png" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article background-color-principal">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title">Já usou algum aplicativo modificado?</p>
+              <p class="subtitle is-4 article-subtitle is-pulled-left">
+                Escrito por Anderson Gomes em 25/02/2020
+              </p>
+              
+              <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->
+            </div>
+          </div>
+          <div class="content article-body"><h1 id="Ja-usou-algum-aplicativo-modificado"><a href="#Ja-usou-algum-aplicativo-modificado" class="headerlink" title="Já usou algum aplicativo modificado?"></a>Já usou algum aplicativo modificado?</h1><p>Você pode esta sendo espionado 😂.</p>
+<hr>
+<h3 id="Ja-usou-algum-aplicativo-modificado-1"><a href="#Ja-usou-algum-aplicativo-modificado-1" class="headerlink" title="Já usou algum aplicativo modificado?"></a>Já usou algum aplicativo modificado?</h3><p>Você pode esta sendo espionado 😂.</p>
+<p>Passei o final de semana realizando engenharia reversa em alguns aplicativos e games voltados para android.</p>
+<p>Realizando uma busca no Google por “apk mod” obtemos vários resultados entre games e aplicativos. É seguro instalar alguns destes aplicativos de procedência duvidosa? não, ás vezes mesmo instalando aplicativos da plataforma oficial é inseguro.</p>
+<p>Irei demonstrar como fazer um apk modificado e no final adicionar uma shell de conexão reversa, o aplicativo que escolhi foi o <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=me.pou.app">Pou</a>.</p>
+<p>Para quem não sabe Pou é este joguinho aqui.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*6DFc5bbE7cL5uQpzk_nvog.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>O jogo começa com 200 moedas, a cada tarefa realiza você ganha um pouco de moedas. Meu objetivo inicial o jogo e ter o máximo de moedas possível.</p>
+<p>Antes de começar precisamos do apk basta instalar ele no Smartphone e usar o <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=mobi.usage.appbackup&hl=pt_BR">app backup</a> para fazer o backup do apk.</p>
+<p>Precisamos de algumas ferramentas:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ibotpeaches.github.io/Apktool/">Apktool</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/konloch/bytecode-viewer/releases">Bytecode Viewer</a></li>
+<li><a target="_blank" rel="noopener" href="http://java-decompiler.github.io/">Java Decompiler (jd-gui)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/patrickfav/uber-apk-signer">Uber Apk Signer</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a> (ou qualquer outro editor de texto)</li>
+</ul>
+<p>Depois de baixar&#x2F;instalar os aplicativos, a lista ficara parecida com esta.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*xQ0HKMuiqZ0Og-tD1Er-TA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Lista de arquivos.</p>
+<p>O primeiro passo é decodificar o apk.</p>
+<blockquote>
+<p>Se você nunca viu um arquivo “.smali” de uma linda nesta <a target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/dalvik-bytecode">página</a> que ira ajudar a entender como é a Sintaxe.</p>
+</blockquote>
+<blockquote>
+<p>java -jar apktool_2.4.1.jar d pou.apk</p>
+</blockquote>
+<p>Apos executar o comando uma nova pasta sera gerada com o aplicativo decodificado.</p>
+<p>precisamos encontrar a classe principal do app, para isso devemos ir no arquivo “AndroidManifest.xml” e procurar a “activity main”, no caso do Pou é “me.pou.app.App”.</p>
+<p>Vamos usar o Bytecode Viewer para ver o source code da aplicação e descobrir onde devemos alterar. Olhando o código fonte achei uma referencia “coin&#x2F;coin_add.png” que é a imagem do topo onde mostra a quantidade moedas e também tem varias referência a “StringBuilder” concatenando numero com texto, vamos editar o arquivo “smali\me\pou\app\AppView.smali”.</p>
+<p>Tudo que estiver assim.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*Wrz4XPyBXrqXK7N6p698gA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Devera mudar para algum texto que de para identificar na tela do aplicativo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*2yu45lxW36Ga1F__FOGGYA.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Eu irei ir modificando na sequencia X1,X2 etc.</p>
+<p>Agora vamos recompilar o aplicativo.</p>
+<blockquote>
+<p>java -jar apktool_2.4.1.jar b pou -o pou_mod.apk</p>
+</blockquote>
+<p>Agora temos que assinar o aplicativo, <strong>“ O Android exige que todos os APKs sejam assinados digitalmente com um certificado antes de serem instalados em um dispositivo ou atualizados”.</strong></p>
+<blockquote>
+<p>java -jar uber-apk-signer-1.1.0.jar -a pou_mod.apk</p>
+</blockquote>
+<p>Foi gerado um novo apk assinado “pou_mod-aligned-debugSigned.apk”, basta instalar e ver o resultado.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*mZ2VDeDKJbMw9n9nXDSUZQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>A nossa modificação esta presente na tela, vamos achar a função que altera os pontos.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*CpcvDAqtiO-lNDGcXPGClw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>O método “h()” parece um bom lugar já que ele nos retorna um numero inteiro como sei disso é simples “-&gt;h()” indica o método e o “I” no final é o tipo de retorno.</p>
+<p>Vamos editar a classe “smali\me\pou\app\g\c\a.smali” procure pelo método “h”.</p>
+<blockquote>
+<p>.method public h()I</p>
+</blockquote>
+<p>Modifique “.locals 2” para “.locals 3” que indica 3 variáveis locais, e no final do método declare uma variável e mude a variável de retorno, ficara parecido com o exemplo abaixo.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*jB6Ug6w2ByOVpU713-nzEw.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<blockquote>
+<p>0x7fffffff (2147483647) é o valor máximo de um numero inteiro em JAVA, se o valor ultrapassar o aplicativo vai apresentar um erro e fechar.</p>
+</blockquote>
+<p>Vamos compilar e instalar novamente e ver o que acontece.</p>
+<figure class="image">
+      <img src="https://cdn-images-1.medium.com/max/800/1*czhr7qWAr-uHTYSNoSY4VQ.png" alt="">
+      <figcaption></figcaption>
+    </figure>
+
+<p>Já temos moedas infinitas, o level vou deixar vocês modificarem.</p>
+<p>No próximo post irei colocar a shell reversa no jogo modificado.</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column is-6 is-offset-3">
+      
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2020/02/25/Ja-usou-algum-aplicativo-modificado-parte-2/"
+        title="Artigo Anterior"
+      >
+        <strong><i class="fa fa-arrow-left"></i> Artigo Anterior</strong>
+      </a>
+       
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="/2019/10/19/VulnHub-serial-2/"
+        title="Próximo Artigo"
+      >
+        <strong>Próximo Artigo <i class="fa fa-arrow-right"></i></strong>
+      </a>
+      
+    </div>
+  </nav>
+</div>
+
+<!--% partial('_partial/post_paging') %-->
+
+		<a id="toTop" class="button" style="display: block;" href="#home-hidden">
+  <span class="icon is-large">
+      <i class="fas fa-arrow-up"></i>
+  </span>
+</a>
+
+<footer class="section footer_section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong
+          >© 2023-2024 Desenvolvido por
+          <a target="_blank" rel="noopener" href="https://andersongomes.dev.br">Anderson Gomes</a>.</strong
+        >
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/bulma.js"></script>
+
+
+	</body>
+</html>
+
