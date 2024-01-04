@@ -1,0 +1,192 @@
+/*
+https://www.color-hex.com/color/19193b
+*/
+* {
+    color: #ffffff !important;
+}
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #19193b;
+}
+
+.background-color-principal {
+    background-color: #19193b;
+}
+
+.p-top {
+    padding-top: 100px !important;
+}
+
+.home-section {
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+}
+
+.home-section-title {
+    font-size: 4rem;
+}
+
+.home-section-title-red {
+    background-color: red;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#about-me-section {
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-item-hover:hover {
+    background-color: transparent !important;
+    border-color: #ffcc00 !important;
+    border-style: none none ridge none;
+}
+
+.fa-youtube {
+    color: red !important;
+}
+
+.fa-linkedin {
+    color: #0A66C2 !important;
+}
+
+.navbar-item-social {
+    background-color: transparent;
+}
+
+.navbar-item-social:hover {
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+}
+
+.section-with-arrow {
+    position: relative;
+    min-height: 100vh;
+}
+
+.floating-arrow-top {
+    background-color: transparent !important;
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+    position: absolute;
+    bottom: -30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    animation: bounce-top 2s linear 0s infinite alternate both;
+}
+
+.floating-arrow-top:hover {
+    color: #ffffff;
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+}
+
+.floating-arrow-down {
+    background-color: transparent !important;
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+    bottom: -45vh;
+    right: 10px;
+    align-self: center;
+    cursor: pointer;
+    animation: bounce-top 2s linear 0s infinite alternate both;
+}
+
+.floating-arrow-down:hover {
+    color: #ffffff;
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+}
+
+@keyframes arrow-bounce {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-50px);}
+    100% { transform: translateY(0);}
+}
+
+#navbarBasicExample, .navbar {
+    background-color: #19193b !important;
+}
+.recuo { 
+    text-indent:2em 
+}
+
+.pagination-previous:hover, .pagination-next:hover, .pagination-link:hover {
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+}
+.post-button {
+    background-color: #3d3d7c !important;
+}
+
+.post-button:hover {
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+}
+
+
+@keyframes bounce-top {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.container-100vh {
+    min-height: 100vh !important;
+}
+
+.artigo-button {
+    background-color: #3d3d7c !important;
+}
+.artigo-button:hover {
+    border-color: #ffcc00 !important;
+    border-style: ridge;
+}

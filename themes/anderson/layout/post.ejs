@@ -1,0 +1,61 @@
+<%- partial('_partial/header',{name:'post'}) %> 
+<!--% partial('_partial/post_head') %--> 
+<!--% partial('_partial/post_centent') %--> 
+<% 
+let cover_creditos = "";
+if(page.cover_creditos){ cover_creditos = page.cover_creditos } 
+%>
+<div class="container container-100vh">
+  <div class="columns">
+    <div class="column is-8 is-offset-2 has-text-centered">
+      <figure class="image is-16by9">
+        <img src="<%= page.cover %>" alt="" />
+      </figure>
+      <p><%= cover_creditos %></p>
+    </div>
+  </div>
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article background-color-principal">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title"><%= page.title %></p>
+              <p class="subtitle is-4 article-subtitle is-pulled-left">
+                <%= date(page.date, "DD-MM-YYYY") %> Por <%= page.author || theme.author %>
+              </p>
+              
+              <!--div class="control"><span class="tag is-info is-uppercase">story</span></div-->
+            </div>
+          </div>
+          <div class="content article-body"><%- page.content %></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column is-6 is-offset-3">
+      <% if(page.prev) { %>
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="<%- url_for(page.prev.path) %>"
+        title="Artigo Anterior"
+      >
+        <strong><i class="fa fa-arrow-left"></i> Artigo Anterior</strong>
+      </a>
+      <% } %> <% if(page.next) {%>
+      <a
+        class="button bd-fat-button is-info is-light bd-pagination-prev artigo-button"
+        href="<%- url_for(page.next.path) %>"
+        title="Próximo Artigo"
+      >
+        <strong>Próximo Artigo <i class="fa fa-arrow-right"></i></strong>
+      </a>
+      <% } %>
+    </div>
+  </nav>
+</div>
+
+<!--% partial('_partial/post_paging') %-->

@@ -1,0 +1,33 @@
+
+<%- partial('_partial/header',{name:'links'}) %>
+<div class="container container-100vh">
+    <div class="links-content" id="content">
+        <div class="links-content-data">
+            <% for(const each of theme.linksList || []) { %>
+                <div class="links-content-data-item">
+                    <a href="<%- each.link %>">
+                        <div class="card">
+                            <div class="user-link-image">
+                                <img src="<%- each.image %>" alt="Quiet">
+                            </div>
+                            <div class="user-link-info">
+                                <h1>
+                                    <%- each.title %>
+                                </h1>
+                                <span>
+                                    <%- each.intro %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+                <div id="article" class="links-content-data-info">
+                    <%- page.content %>
+                </div>
+        </div>
+        <div id="<%- page.comments ? 'gitalk-container' : ''%>"></div>
+    </div>
+</div>
+
+            

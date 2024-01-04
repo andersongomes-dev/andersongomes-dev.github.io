@@ -1,0 +1,36 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: #19193b;">
+	<div class="container">
+		<div class="navbar-brand">
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<% for(const menu in theme.menus) { %>
+					</for>
+					<a class="navbar-item navbar-item-hover" href="<%= theme.menus[menu] %>">
+						<%= theme.menus_title[menu] %>
+					</a>
+					<% } %>
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button navbar-item-social" href="https://www.youtube.com/@andersonDev_">
+							<i class="fa-brands fa-youtube fa-2xl"></i>
+						</a>
+						<a class="button navbar-item-social" href="https://www.linkedin.com/in/devanderson">
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,114 @@
+<section class="section container-100vh">
+	<div class="container has-text-centered">
+		<section class="blog-posts">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-10 is-offset-1">
+						<% page.posts.each(function (post,i) { %>
+							<% if(i==0){ %>
+								<div class="columns featured-post is-multiline">
+									<div class="column is-12 post">
+										<article class="columns featured">
+											<div class="column is-7 post-img ">
+												<img src="<%= post.cover %>" alt="">
+											</div>
+											<div class="column is-5 featured-content va">
+												<div>
+													<!--h3 class="heading post-category">Category Name</h3-->
+													<h1 class="title post-title">
+														<%= post.title %>
+													</h1>
+													<p class="post-excerpt">
+														<%= post.excerpt || '' %>
+													</p>
+													<br>
+													<div class="post-block-content-info-exhibition">
+														<div class="post-block-content-info-exhibition-tags">
+															<!--span class="post-tag">
+																<%- post.categories.data[0] ? post.categories.data[0].name : theme.author ? theme.author : 'Quiet' %>
+															</span>
+															<span class="post-tag">
+																<%- date(post.date, "YYYY-MM-DD" ) %>
+															</span-->
+														</div>
+														<div class="meat-type"></div>
+													</div>
+													<br>
+													<a href="<%- url_for(post.path) %>" class="button is-primary post-button">Read More</a>
+												</div>
+											</div>
+											
+										</article>
+									</div>
+								</div>
+								<hr>
+								<% } %>
+									<% }) %>
+										<div class="columns is-multiline">
+											<% page.posts.each(function (post,i) { %>
+												<% if(i> 0){ %>
+													<div class="column post is-6">
+														<article class="columns is-multiline">
+															<div class="column is-12 post-img">
+																<img src="<%= post.cover %>" alt="Featured Image">
+															</div>
+															<div class="column is-12 featured-content ">
+																<!--h3 class="heading post-category">Category Name</h3-->
+																<h1 class="title post-title">
+																	<%= post.title %>
+																</h1>
+																<p class="post-excerpt">
+																	<%= post.excerpt || '' %>
+																</p>
+																<br>
+																<div class="post-block-content-info-exhibition">
+																	<div class="post-block-content-info-exhibition-tags">
+																		<!--span class="post-tag">
+																			<%- post.categories.data[0] ? post.categories.data[0].name : theme.author ? theme.author : 'Quiet' %>
+																		</span>
+																		<span class="post-tag">
+																			<%- date(post.date, "YYYY-MM-DD" ) %>
+																		</span-->
+																	</div>
+																	<div class="meat-type"></div>
+																</div>
+																<br>
+																<a href="<%- url_for(post.path) %>"
+																	class="button is-primary post-button">Read More</a>
+															</div>
+														</article>
+													</div>
+													<hr>
+													<% } %>
+														<% }) %>
+										</div>
+					</div>
+				</div>
+
+		</section>
+	</div>
+	<hr>
+	<div class="container">
+		<div class="column is-4 is-offset-4">
+			<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+				<% if(page.prev !==0){ %>
+					<a class="pagination-previous" href="<%- url_for(page.prev_link) %>"
+						style="align-content: center;">Anterior</a>
+					<% } else { %>
+						<a class="pagination-previous" disabled>Previous</a>
+						<% } %>
+							<% if(page.next !==0){ %>
+								<a class="pagination-next" href="<%- url_for(page.next_link) %>">Próxima</a>
+								<% } else { %>
+									<a class="pagination-next" disabled>Next page</a>
+									<% } %>
+										<ul class="pagination-list">
+											<li><a class="pagination-link is-current" aria-current="page" disabled>
+													<%= page.current %>
+												</a></li>
+										</ul>
+			</nav>
+		</div>
+
+	</div>
+</section>

@@ -1,0 +1,24 @@
+
+<%- partial('_partial/header',{name:'tags'}) %>
+<%
+    let date_cursor = 'xxx'
+%>
+
+<%
+    let years = {};
+    page.posts.each(function (post) {
+        if(date(post.date, "YYYY") != date_cursor) {
+            date_cursor = date(post.date, "YYYY")
+            if(years[date_cursor] === undefined){
+                years[date_cursor] = []
+            }
+        }
+        years[date_cursor].push(post);
+    })
+%>
+<div class="tag">
+    <div class="tag-content" id="content">
+        <div class="tag-content-data">
+        </div>
+    </div>
+</div>
