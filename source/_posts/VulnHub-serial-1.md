@@ -2,7 +2,12 @@
 title: 'VulnHub serial: 1'
 excerpt: "Desafio CTF <strong><a href=''>VulnHub serial: 1</a></strong> Realizado para aprendizado sobre conceitos de segurança da informação."
 date: 2019-08-22 17:08:41
-tags:
+tags: 
+  - Hacking
+  - Tutorial
+  - Segurança da informação
+  - CTF
+  - "Series: serial"
 cover: https://cdn-images-1.medium.com/max/800/1*E0oIubshtbc73STQvJvVVA.png
 cover_creditos:
 default_cover:

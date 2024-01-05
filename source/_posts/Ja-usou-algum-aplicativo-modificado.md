@@ -2,7 +2,11 @@
 title: Já usou algum aplicativo modificado?
 excerpt: Primeira parte do artigo, como criar um aplicativo modificado para fins de estudo.
 date: 2020-02-25 00:00:00
-tags:
+tags: 
+  - Hacking
+  - Tutorial
+  - Segurança da informação
+  - CTF
 cover: https://cdn-images-1.medium.com/max/800/1*6DFc5bbE7cL5uQpzk_nvog.png
 cover_creditos:
 default_cover:

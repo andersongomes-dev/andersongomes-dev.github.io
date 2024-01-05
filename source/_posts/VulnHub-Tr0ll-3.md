@@ -1,7 +1,11 @@
 ---
 title: 'VulnHub Tr0ll: 3'
 date: 2019-08-10 16:30:58
-tags:
+tags: 
+  - Hacking
+  - Tutorial
+  - Segurança da informação
+  - CTF
 cover: https://cdn-images-1.medium.com/max/800/1*nw1NlT8J4dpZuTwD2bYh5Q.png
 cover_creditos: 
 default_cover:

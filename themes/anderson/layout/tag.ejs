@@ -1,24 +1,69 @@
 
 <%- partial('_partial/header',{name:'tags'}) %>
-<%
-    let date_cursor = 'xxx'
-%>
-
-<%
-    let years = {};
-    page.posts.each(function (post) {
-        if(date(post.date, "YYYY") != date_cursor) {
-            date_cursor = date(post.date, "YYYY")
-            if(years[date_cursor] === undefined){
-                years[date_cursor] = []
-            }
-        }
-        years[date_cursor].push(post);
-    })
-%>
-<div class="tag">
-    <div class="tag-content" id="content">
-        <div class="tag-content-data">
+<div class="container container-100vh">
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-3">
+                    <aside class="is-medium menu">
+                        <h3 class="title is-3">TAGS</h3>
+                        <div class="column is-12">
+                            <% site.tags.map(function(tag,i){  %>
+                                <div class="control" style="margin-bottom: 10px;">
+                                    <div class="tags has-addons">
+                                      <span class="tag is-dark">
+                                        <a href="<%- url_for(tag.path) %>" class="is-active">
+                                            <!--i class="fab fa-css3-alt"></i-->
+                                            <%= tag.name %>
+                                        </a>
+                                      </span>
+                                      <span class="tag is-info">
+                                        <%- tag.length %>
+                                      </span>
+                                    </div>
+                                  </div>
+                            <% }) %>
+                        </div>
+                    </aside>
+                </div>
+                <div class="column is-9">
+                    <div class="content is-medium">
+                            <h3 class="title is-3">ARTIGOS</h3>
+                            <%  page.posts.forEach(post => { %>
+                                <div class="column is-12">
+                                    <div class="card post-card">
+                                        <article class="card-content article" role="article">
+                                            
+                                            <h1 class="title is-3 is-size-4-mobile">
+                                                <a class="link-muted" href="<%- url_for(post.path) %>">
+                                                    <%= post.title  %>
+                                                </a>
+                                            </h1>
+                                            <div class="content"><p>
+                                                <%- post.excerpt  %>
+                                            </p>
+                                            </div>
+                                            <!--a class="article-more button is-small is-size-7 button is-primary" href="<%- url_for(post.path) %>">
+                                                Leia Mais
+                                            </a-->
+                                            <div>
+                                                <a href="<%- url_for(post.path) %>" class="button is-primary">Leia Mais</a>
+                                            </div>
+                                            <br>
+                                            <div class="article-meta is-size-7 is-uppercase level is-mobile">
+                                                <div class="level-left">
+                                                    <span class="level-item">Publicado: <%- date(post.date, "DD/MM/YYYY" ) %>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                               
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </div>

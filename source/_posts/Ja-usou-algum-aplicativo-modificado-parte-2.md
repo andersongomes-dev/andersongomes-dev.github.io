@@ -2,7 +2,11 @@
 title: Já usou algum aplicativo modificado? (parte 2)
 excerpt: Segunda parte do artigo, como criar um aplicativo modificado para fins de estudo.
 date: 2020-02-25 23:00:00
-tags: 1,2,3
+tags: 
+  - Hacking
+  - Tutorial
+  - Segurança da informação
+  - CTF
 cover: https://cdn-images-1.medium.com/max/800/1*nQw9NwHbf-3lW2fB3Y5zyg.png
 cover_creditos:
 default_cover:

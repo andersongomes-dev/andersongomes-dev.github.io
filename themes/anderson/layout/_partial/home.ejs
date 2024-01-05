@@ -19,7 +19,7 @@
 														<%= post.title %>
 													</h1>
 													<p class="post-excerpt">
-														<%= post.excerpt || '' %>
+														<%- post.excerpt || '' %>
 													</p>
 													<br>
 													<div class="post-block-content-info-exhibition">
@@ -91,7 +91,7 @@
 																	<%= post.title %>
 																</h1>
 																<p class="post-excerpt">
-																	<%= post.excerpt || '' %>
+																	<%- post.excerpt || '' %>
 																</p>
 																<br>
 																<div class="post-block-content-info-exhibition">
@@ -121,25 +121,37 @@
 		</section>
 	</div>
 	<hr>
+	
+
 	<div class="container">
 		<div class="column is-4 is-offset-4">
 			<nav class="pagination is-centered" role="navigation" aria-label="pagination">
 				<% if(page.prev !==0){ %>
 					<a class="pagination-previous" href="<%- url_for(page.prev_link) %>"
-						style="align-content: center;">Anterior</a>
-					<% } else { %>
-						<a class="pagination-previous" disabled>Previous</a>
-						<% } %>
-							<% if(page.next !==0){ %>
-								<a class="pagination-next" href="<%- url_for(page.next_link) %>">Próxima</a>
-								<% } else { %>
-									<a class="pagination-next" disabled>Next page</a>
-									<% } %>
-										<ul class="pagination-list">
-											<li><a class="pagination-link is-current" aria-current="page" disabled>
-													<%= page.current %>
-												</a></li>
-										</ul>
+						style="align-content: center;">
+						<strong><i class="fa fa-arrow-left"></i> Anterior</strong>
+					</a>
+				<% } else { %>
+					<a class="pagination-previous" disabled>
+						<strong><i class="fa fa-arrow-left"></i> Anterior</strong>
+					</a>
+				<% } %>
+
+				<% if(page.next !==0){ %>
+					<a class="pagination-next" href="<%- url_for(page.next_link) %>">
+						<strong>Próximo <i class="fa fa-arrow-right"></i></strong>
+					</a>
+				<% } else { %>
+					<a class="pagination-next" disabled>
+						<strong>Próximo <i class="fa fa-arrow-right"></i></strong>
+					</a>
+				<% } %>
+
+				<ul class="pagination-list">
+					<li><a class="pagination-link is-current" aria-current="page" disabled>
+							<%= page.current %>
+						</a></li>
+				</ul>
 			</nav>
 		</div>
 

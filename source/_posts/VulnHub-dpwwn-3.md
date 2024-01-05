@@ -2,7 +2,11 @@
 title: 'VulnHub dpwwn: 3'
 excerpt: "Desafio CTF <strong><a href=''>VulnHub dpwwn: 3</a></strong> Realizado para aprendizado sobre conceitos de segurança da informação."
 date: 2019-09-04 17:08:43
-tags:
+tags: 
+  - Hacking
+  - Tutorial
+  - Segurança da informação
+  - CTF
 cover: https://cdn-images-1.medium.com/max/800/1*SnTSI7XJVVSEbtQ_Oov1Vw.png
 cover_creditos:
 default_cover:

@@ -1,7 +1,11 @@
 ---
 title: 'VulnHub sunset: 1'
 date: 2019-08-04 00:00:00
-tags:
+tags: 
+  - Hacking
+  - Tutorial
+  - Segurança da informação
+  - CTF
 cover: https://cdn-images-1.medium.com/max/800/1*NL99mutaA0_OEN_MTdEH1g.png
 cover_creditos:
 default_cover: https://cdn-images-1.medium.com/max/800/1*NL99mutaA0_OEN_MTdEH1g.png

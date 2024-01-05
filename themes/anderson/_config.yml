@@ -9,16 +9,19 @@ menus_title:
   home: HOME
   #archive: ARCHIVE
   #categories: CATEGORIES
-  #tags: TAGS
+  tags: TAGS
   #links: LINKS
+  gitrepos: GIT REPOS
   about: ABOUT
 menus:
   home: /
   #archive: /archives
   #categories: /categories
-  #tags: /tags
+  tags: /tags
   #links: /links
+  gitrepos: /gitrepos
   about: /about
+  
 icon: /assets/favicons/favicon.ico
 bottomIcon: 
   - {
